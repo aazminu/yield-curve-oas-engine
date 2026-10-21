@@ -58,3 +58,6 @@ __all__ = [
     "solve_oas",
     "effective_duration_convexity",
 ]
+
+from .diagnostics import run_diagnostic_suite, validate_runtime_invariants
+__all__ = list(__all__) + ["run_diagnostic_suite", "validate_runtime_invariants"]
