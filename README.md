@@ -143,3 +143,18 @@ oas_bps = solve_oas(callable_bond, curve, market_price=99.75, steps_per_year=20,
 px, d_eff, c_eff = effective_duration_convexity(callable_bond, curve, oas_bps=oas_bps)
 print(f"Solved OAS: {oas_bps:.2f} bps | Effective Duration: {d_eff:.3f} | Effective Convexity: {c_eff:.2f}")
 ```
+
+
+## CLI Diagnostics & Invariant Verification
+
+Run the built-in deterministic diagnostic probe and invariant self-check directly via the module CLI:
+
+```bash
+PYTHONPATH=src python -m yield_oas --self-test --json
+```
+
+Run the complete regression test suite:
+
+```bash
+PYTHONPATH=src pytest -q
+```
